@@ -1,4 +1,7 @@
 [[plugins]]
+repo = 'reedes/vim-colors-pencil'
+
+[[plugins]]
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
@@ -7,6 +10,9 @@ hook_add = '''
 nmap <Space>t :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 '''
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
 
 [[plugins]]
 repo = 'w0rp/ale'
@@ -28,5 +34,56 @@ nmap <silent> <C-u><C-d> :<C-u>call denite#start([{'name': 'file_rec', 'args': [
 nnoremap ml :<C-u>call denite#start([{'name': 'file_rec', 'args': [g:memolist_path]}])<CR>
 '''
 
+[[plugins]]
+repo = 'digitaltoad/vim-pug'
 
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+[[plugins]]
+repo = 'cohama/lexima.vim'
+
+
+[[plugins]]
+repo = 'kassio/neoterm'
+
+hook_add = '''
+" :Tnew の場合に挿入モードで開始する
+let g:neoterm_autoinsert = 1
+
+" :T {cmd} 実行時に画面スクロールをする
+let g:neoterm_autoscroll = 1
+
+" 縦分割する
+" let g:neoterm_default_mod='vertical'
+" 横分割する
+let g:neoterm_default_mod='belowright'
+
+" :Tnew 実行
+nnoremap <silent> <C-e><C-t> :Tnew<CR>
+" :Tnew 実行(縦分割)
+nnoremap <silent> <C-e><C-v> :vertical Tnew<CR>
+" 非ビジュアルモード
+nnoremap <silent> <C-e><C-e> :TREPLSendLine<CR>
+" ビジュアルモード
+vnoremap <silent> <C-e><C-e> V:TREPLSendSelection<CR>
+" ファイル送信
+nnoremap <silent> <C-e><C-f> :TREPLSendFile<CR>
+'''
+
+[[plugin]]
+repo = 'Shougo/deoplete.nvim'
+
+hook_add = '''
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#auto_completion_start_length = 1
+
+call plug#begin()
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'wokalski/autocomplete-flow'
+  Plug 'Shougo/neosnippet'
+  Plug 'Shougo/neosnippet-snippets'
+call plug#end()
+'''
+ 
 

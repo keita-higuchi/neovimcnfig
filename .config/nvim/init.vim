@@ -2,6 +2,9 @@ set nu
 set expandtab
 set tabstop=4
 set shiftwidth=4
+set noswapfile
+set smartcase
+set ignorecase
 
 if &compatible
   set nocompatible
@@ -23,7 +26,7 @@ endif
 filetype plugin indent on
 syntax enable
 
-colorscheme morning
+colorscheme pencil
 
 let g:python3_host_prog = expand('/usr/bin/python3')
 
