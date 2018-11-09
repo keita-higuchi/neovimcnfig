@@ -5,6 +5,7 @@ set shiftwidth=4
 set noswapfile
 set smartcase
 set ignorecase
+set clipboard+=unnamedplus
 
 if &compatible
   set nocompatible
