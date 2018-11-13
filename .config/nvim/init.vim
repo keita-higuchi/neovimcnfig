@@ -18,7 +18,7 @@ if dein#check_install()
 	call dein#install()
 endif
 
-set nu
+"set nu
 set expandtab
 set tabstop=4
 set shiftwidth=4
@@ -32,3 +32,5 @@ colorscheme pencil
 
 let g:python3_host_prog = expand('/usr/bin/python3')
 
+call dein#call_hook('source')
+call dein#call_hook('post_source')
