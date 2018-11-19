@@ -18,10 +18,17 @@ let NERDTreeShowHidden=1
 '''
 
 [[plugins]]
+repo = 'Xuyuanp/nerdtree-git-plugin'
+
+
+[[plugins]]
 repo = 'airblade/vim-gitgutter'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
+hook_post_source = '''
+nnoremap <silent> <C-g><C-s> :Gstatus<CR>
+'''
 
 [[plugins]]
 repo = 'w0rp/ale'
@@ -76,7 +83,9 @@ let g:neoterm_autoscroll = 1
 " let g:neoterm_default_mod='vertical'
 " 横分割する
 let g:neoterm_default_mod='belowright'
+'''
 
+hook_post_source = '''
 " :Tnew 実行
 nnoremap <silent> <C-e><C-t> :Tnew<CR>
 " :Tnew 実行(縦分割)
@@ -85,7 +94,27 @@ nnoremap <silent> <C-e><C-v> :vertical Tnew<CR>
 nnoremap <silent> <C-e><C-e> :TREPLSendLine<CR>
 " ビジュアルモード
 vnoremap <silent> <C-e><C-e> V:TREPLSendSelection<CR>
+
 " ファイル送信
 nnoremap <silent> <C-e><C-f> :TREPLSendFile<CR>
+tnoremap <silent> <ESC> <C-\><C-n>
 '''
+
+[[plugins]]
+repo = 'vim-scripts/fcitx.vim'
+
+[[plugins]]
+repo = 'glidenote/memolist.vim'
+hook_post_source = '''
+let g:memolist_memo_suffix = "md"
+let g:memolist_denite = 1
+let g:memolist_path = "~/note"
+let g:memolist_filename_prefix_none = 1
+nmap <silent> <C-m><C-l>  :MemoList<CR>
+nmap <silent> <C-m><C-n>  :MemoNew<CR>
+nmap <silent> <C-m><C-g>  :MemoGrep<CR>
+'''
+
+
+
 

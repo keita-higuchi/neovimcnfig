@@ -18,7 +18,7 @@ if dein#check_install()
 	call dein#install()
 endif
 
-"set nu
+set nu
 set expandtab
 set tabstop=4
 set shiftwidth=4
@@ -26,6 +26,7 @@ set noswapfile
 set smartcase
 set ignorecase
 set clipboard+=unnamedplus
+set diffopt+=vertical
 
 
 colorscheme pencil
