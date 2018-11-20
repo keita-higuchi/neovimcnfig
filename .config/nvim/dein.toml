@@ -12,9 +12,9 @@ repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
-hook_add = '''
+hook_post_source = '''
 nmap <Space>t :NERDTreeToggle<CR>
-let NERDTreeShowHidden=1
+let g:NERDTreeShowHidden=1
 '''
 
 [[plugins]]
@@ -114,7 +114,4 @@ nmap <silent> <C-m><C-l>  :MemoList<CR>
 nmap <silent> <C-m><C-n>  :MemoNew<CR>
 nmap <silent> <C-m><C-g>  :MemoGrep<CR>
 '''
-
-
-
 
